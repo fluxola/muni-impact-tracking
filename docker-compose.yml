@@ -1,0 +1,12 @@
+version: '3'
+services:
+  muni-impact-tracking:
+    build:
+      context: .
+    restart: unless-stopped  
+    container_name: muni-impact-tracking
+    ports:
+      - "5000:5000"  
+    volumes:
+      - ./outputs:/usr/src/app/outputs
+    
